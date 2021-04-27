@@ -2,7 +2,7 @@ require 'json'
 
 module AthenaHealth
   class Connection
-    BASE_URL    = 'https://api.athenahealth.com'.freeze
+    BASE_URL    = 'https://api.platform.athenahealth.com'.freeze
     AUTH_PATH   = { 'v1' => 'oauth2', 'preview1' => 'oauthpreview', 'openpreview1' => 'oauthopenpreview' }
 
     def initialize(version:, key:, secret:, token: nil, base_url: BASE_URL)
