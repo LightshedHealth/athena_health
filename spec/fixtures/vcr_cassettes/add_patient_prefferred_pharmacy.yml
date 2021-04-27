@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.athenahealth.com/oauthpreview/token
+    uri: https://api.platform.athenahealth.com/oauth2/v1/token
     body:
       encoding: US-ASCII
       string: grant_type=client_credentials
@@ -35,11 +35,11 @@ http_interactions:
       string: '{"access_token":"763dk2q9rrzxj7dsgc6xvfss","token_type":"bearer","expires_in":3600,"refresh_token":"b5cmh37w6uwvw4a4njkucnf4"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/oauthpreview/token
+      effective_url: https://api.platform.athenahealth.com/oauth2/v1/token
   recorded_at: Thu, 21 Apr 2016 09:56:37 GMT
 - request:
     method: put
-    uri: https://api.athenahealth.com/preview1/195900/chart/1/pharmacies/preferred?clinicalproviderid=11242674&departmentid=1
+    uri: https://api.platform.athenahealth.com/v1/195900/chart/1/pharmacies/preferred?clinicalproviderid=11242674&departmentid=1
     body:
       encoding: US-ASCII
       string: ''
@@ -82,6 +82,6 @@ http_interactions:
       string: '{"success":"true"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/preview1/195900/chart/1/pharmacies/preferred?clinicalproviderid=11242674&departmentid=1
+      effective_url: https://api.platform.athenahealth.com/v1/195900/chart/1/pharmacies/preferred?clinicalproviderid=11242674&departmentid=1
   recorded_at: Thu, 21 Apr 2016 09:56:37 GMT
 recorded_with: VCR 3.0.1

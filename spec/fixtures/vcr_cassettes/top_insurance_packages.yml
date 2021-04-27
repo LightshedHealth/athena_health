@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.athenahealth.com/oauthpreview/token
+    uri: https://api.platform.athenahealth.com/oauth2/v1/token
     body:
       encoding: US-ASCII
       string: grant_type=client_credentials
@@ -35,11 +35,11 @@ http_interactions:
       string: '{"access_token":"test_access_token","token_type":"bearer","expires_in":3600,"refresh_token":"test_refresh_token"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/oauthpreview/token
+      effective_url: https://api.platform.athenahealth.com/oauth2/v1/token
   recorded_at: Thu, 25 Feb 2016 18:18:03 GMT
 - request:
     method: get
-    uri: https://api.athenahealth.com/preview1/195900/misc/topinsurancepackages
+    uri: https://api.platform.athenahealth.com/v1/195900/misc/topinsurancepackages
     body:
       encoding: US-ASCII
       string: ''
@@ -87,6 +87,6 @@ http_interactions:
         BOX 986020"},{"ranking":"4","name":"PAYMENT PLAN","percentage":"1.3877207737594617325483599663582842725","insurancepackageid":"-500"}],"totalcount":4}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/preview1/195900/misc/topinsurancepackages
+      effective_url: https://api.platform.athenahealth.com/v1/195900/misc/topinsurancepackages
   recorded_at: Thu, 25 Feb 2016 18:18:04 GMT
 recorded_with: VCR 3.0.1

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.athenahealth.com/oauthpreview/token
+    uri: https://api.platform.athenahealth.com/oauth2/v1/token
     body:
       encoding: US-ASCII
       string: grant_type=client_credentials
@@ -35,11 +35,11 @@ http_interactions:
       string: '{"access_token":"test_access_token","token_type":"bearer","expires_in":3600,"refresh_token":"test_refresh_token"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/oauthpreview/token
+      effective_url: https://api.platform.athenahealth.com/oauth2/v1/token
   recorded_at: Fri, 10 Jun 2016 06:28:57 GMT
 - request:
     method: get
-    uri: https://api.athenahealth.com/preview1/195900/appointments/150777
+    uri: https://api.platform.athenahealth.com/v1/195900/appointments/150777
     body:
       encoding: US-ASCII
       string: ''
@@ -84,6 +84,6 @@ http_interactions:
         16:06:37","patientappointmenttypename":"VIDEO CHAT"}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/preview1/195900/appointments/150777
+      effective_url: https://api.platform.athenahealth.com/v1/195900/appointments/150777
   recorded_at: Fri, 10 Jun 2016 06:28:57 GMT
 recorded_with: VCR 3.0.1

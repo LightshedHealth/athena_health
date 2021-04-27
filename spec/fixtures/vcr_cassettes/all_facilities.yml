@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.athenahealth.com/oauthpreview/token
+    uri: https://api.platform.athenahealth.com/oauth2/v1/token
     body:
       encoding: US-ASCII
       string: grant_type=client_credentials
@@ -35,11 +35,11 @@ http_interactions:
       string: '{"access_token":"qseyzkequ9nbaa7ykccexekf","token_type":"bearer","expires_in":3600,"refresh_token":"97pdpem2cmnxcbf923kvcuyw"}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/oauthpreview/token
+      effective_url: https://api.platform.athenahealth.com/oauth2/v1/token
   recorded_at: Tue, 19 Apr 2016 10:42:04 GMT
 - request:
     method: get
-    uri: https://api.athenahealth.com/preview1/195900/chart/configuration/facilities?name=New%20York&departmentid=1&ordertype=PRESCRIPTION
+    uri: https://api.platform.athenahealth.com/v1/195900/chart/configuration/facilities?name=New%20York&departmentid=1&ordertype=PRESCRIPTION
     body:
       encoding: US-ASCII
       string: ''
@@ -171,6 +171,6 @@ http_interactions:
         888-1435","city":"NEW YORK","zipcode":"11209","phonenumber":"(212) 752-3043"}]'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.athenahealth.com/preview1/195900/chart/configuration/facilities?name=New%20York&departmentid=1&ordertype=PRESCRIPTION
+      effective_url: https://api.platform.athenahealth.com/v1/195900/chart/configuration/facilities?name=New%20York&departmentid=1&ordertype=PRESCRIPTION
   recorded_at: Tue, 19 Apr 2016 10:42:07 GMT
 recorded_with: VCR 3.0.1

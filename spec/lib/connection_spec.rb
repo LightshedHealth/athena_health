@@ -13,7 +13,7 @@ describe AthenaHealth::Connection do
 
   it 'has defined BASE_URL constant' do
     expect(AthenaHealth::Connection::BASE_URL)
-      .to eq 'https://api.athenahealth.com'
+      .to eq 'https://api.platform.athenahealth.com'
   end
 
   context 'when base_url is not defined' do
@@ -50,14 +50,13 @@ describe AthenaHealth::Connection do
   it 'has defined AUTH_PATH constant' do
     expect(AthenaHealth::Connection::AUTH_PATH)
       .to eq(
-        'v1' => 'oauth',
-        'preview1' => 'oauthpreview',
+        'v1' => 'oauth2',
         'openpreview1' => 'oauthopenpreview'
       )
   end
 
   describe '#authenticate' do
-    context 'when version is preview1' do
+    context 'when version is v1' do
       let(:version) { 'v1' }
 
       it 'returns token' do
@@ -67,8 +66,8 @@ describe AthenaHealth::Connection do
       end
     end
 
-    context 'when version is preview1' do
-      let(:version) { 'preview1' }
+    context 'when version is v1' do
+      let(:version) { 'v1' }
 
       it 'returns token' do
         VCR.use_cassette('preview1_authentication') do
@@ -89,7 +88,7 @@ describe AthenaHealth::Connection do
   end
 
   describe '#call' do
-    let(:version)       { 'preview1' }
+    let(:version)       { 'v1' }
     let(:response_body) { '{"body":"value"}' }
     let(:request)       { instance_double(Typhoeus::Request) }
 
@@ -107,7 +106,7 @@ describe AthenaHealth::Connection do
       end
 
       expect(Typhoeus::Request).to receive(:new).with(
-        'https://api.athenahealth.com/preview1/test_endpoint',
+        'https://api.platform.athenahealth.com/v1/test_endpoint',
         method: :get,
         headers: { 'Authorization' => 'Bearer test_access_token' },
         params: {},
